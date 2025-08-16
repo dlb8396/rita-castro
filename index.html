@@ -1,66 +1,72 @@
 <!doctype html>
-<html lang="e
-n">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>From Start to Finish Cleaning | Billings, MT House Cleaning</title>
   <meta name="description" content="From Start to Finish Cleaning by Rita Castro. Reliable house cleaning in Billings, MT: recurring, deep cleans, and move‑in/move‑out. Free quotes." />
-  <meta name="theme-color" content="#0f766e" />
+  <meta name="theme-color" content="#d4af37" />
   <!-- Open Graph -->
   <meta property="og:title" content="From Start to Finish Cleaning" />
   <meta property="og:description" content="Reliable house cleaning in Billings, MT. Recurring, deep cleans, and move‑in/move‑out. Free quotes." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.example.com" />
-  <meta property="og:image" content="/og-image.jpg" />
+  <meta property="og:url" content="https://www.fsfcleaning.com" />
+  <meta property="og:image" content="/images/fsfcleaning-og.jpg" />
 
   <style>
     :root{
-      --brand:#0f766e; /* teal-700 */
-      --brand-600:#0d9488; /* teal-600 */
-      --ink:#0f172a; /* slate-900 */
-      --muted:#475569; /* slate-600 */
-      --bg:#f8fafc; /* slate-50 */
-      --card:#ffffff;
-      --ring:rgba(13,148,136,.35);
+      --brand:#d4af37; /* gold */
+      --brand-600:#b8860b; /* darker gold */
+      --ink:#2c2c2c; /* dark gray text */
+      --muted:#6b6b6b; /* medium gray */
+      --bg:#fffef9; /* cream background */
+      --card:#ffffff; /* white cards */
+      --ring:rgba(212,175,55,.35); /* gold focus ring */
     }
     *{box-sizing:border-box}
-    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,"Noto Sans",sans-serif;line-height:1.6;color:var(--ink);background:var(--bg)}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,"Noto Sans",sans-serif;line-height:1.6;color:var(--ink);background:var(--bg);
+      /* subtle gold dot texture */
+      background-image: radial-gradient(rgba(212,175,55,.08) .6px, transparent .7px);
+      background-size: 18px 18px;
+    }
     a{color:var(--brand-600);text-decoration:none}
     a:hover{text-decoration:underline}
     .container{width:min(1100px,90vw);margin-inline:auto}
-    header{position:sticky;top:0;background:#ffffffd9;backdrop-filter:saturate(180%) blur(6px);border-bottom:1px solid #e2e8f0;z-index:50}
+    header{position:sticky;top:0;background:var(--card);border-bottom:2px solid var(--brand-600);z-index:50}
     .nav{display:flex;align-items:center;justify-content:space-between;padding:.85rem 0}
-    .logo{display:flex;align-items:center;gap:.6rem;font-weight:800;font-size:1.05rem;color:var(--ink)}
+    .logo{display:flex;align-items:center;gap:.6rem;font-weight:800;font-size:1.05rem;color:var(--brand-600)}
     .logo-badge{width:34px;height:34px;border-radius:9px;background:var(--brand);display:grid;place-items:center;color:#fff;font-weight:900}
     .nav a{margin-left:1rem;font-weight:600;color:var(--muted)}
+    .social{display:flex;align-items:center;gap:.75rem}
+    .social a{color:var(--brand-600);font-weight:700}
     .btn{display:inline-block;padding:.75rem 1rem;border-radius:12px;border:1px solid transparent;font-weight:700}
     .btn-primary{background:var(--brand);color:#fff}
     .btn-primary:hover{background:var(--brand-600)}
-    .btn-ghost{border-color:#cbd5e1;color:var(--ink);background:#fff}
-    .hero{padding:5rem 0 3rem;background:linear-gradient(180deg,#ecfeff,transparent)}
-    .hero h1{font-size:clamp(1.9rem,5vw,3rem);line-height:1.15;margin:0 0 1rem}
+    .btn-ghost{border-color:var(--brand-600);color:var(--brand-600);background:#fff}
+    .hero{padding:5rem 0 3rem;background:linear-gradient(180deg,#fff8e1,transparent)}
+    .hero h1{font-size:clamp(1.9rem,5vw,3rem);line-height:1.15;margin:0 0 1rem;color:var(--brand-600)}
     .lead{font-size:1.1rem;color:var(--muted);max-width:60ch}
     .hero-cta{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:1.25rem}
     .badges{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:1.25rem}
-    .badge{background:#fff;border:1px solid #e2e8f0;border-radius:999px;padding:.35rem .7rem;font-weight:700;color:var(--muted)}
+    .badge{background:var(--card);border:1px solid var(--brand-600);border-radius:999px;padding:.35rem .7rem;font-weight:700;color:var(--brand-600)}
     section{padding:2.75rem 0}
-    h2{font-size:clamp(1.4rem,3vw,2rem);margin:.2rem 0 1rem}
+    h2{font-size:clamp(1.4rem,3vw,2rem);margin:.2rem 0 1rem;color:var(--brand-600)}
     .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:1rem}
-    .card{grid-column:span 12;background:var(--card);border:1px solid #e2e8f0;border-radius:16px;padding:1.25rem;box-shadow:0 1px 0 rgba(0,0,0,.03)}
+    .card{grid-column:span 12;background:var(--card);border:1px solid #e2e8f0;border-radius:16px;padding:1.25rem;box-shadow:0 2px 5px rgba(0,0,0,.05)}
     @media (min-width:720px){.card.md-6{grid-column:span 6}.card.md-4{grid-column:span 4}.card.md-8{grid-column:span 8}}
-    .card h3{margin-top:.2rem}
+    .card h3{margin-top:.2rem;color:var(--brand-600)}
     .list{margin:0;padding-left:1.1rem}
     .kpi{display:flex;gap:1rem;align-items:center}
-    .kpi b{font-size:1.7rem}
+    .kpi b{font-size:1.7rem;color:var(--brand)}
     .process{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
-    .step{background:#fff;border:1px solid #e2e8f0;border-radius:16px;padding:1rem;text-align:center}
+    .step{background:var(--card);border:1px solid #e2e8f0;border-radius:16px;padding:1rem;text-align:center;box-shadow:0 1px 3px rgba(0,0,0,.04)}
     .step .num{width:34px;height:34px;border-radius:9px;background:var(--brand);color:#fff;display:grid;place-items:center;font-weight:900;margin:0 auto .5rem}
-    .testimonial{font-style:italic;color:#334155}
-    form{display:grid;gap:.6rem}
+    .testimonial{font-style:italic;color:var(--muted)}
     input, textarea{padding:.8rem;border:1px solid #cbd5e1;border-radius:12px;font:inherit}
     input:focus, textarea:focus{outline:3px solid var(--ring);border-color:var(--brand-600)}
-    footer{padding:2rem 0;border-top:1px solid #e2e8f0;color:#475569}
+    footer{padding:2rem 0;border-top:2px solid var(--brand-600);color:var(--card);background:var(--brand-600);text-align:center}
+    footer p{margin:.5rem 0}
+    .inline-links{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
     .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
   </style>
 
@@ -70,9 +76,9 @@ n">
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "From Start to Finish Cleaning",
-    "image": "https://www.example.com/og-image.jpg",
-    "url": "https://www.example.com",
-    "telephone": "+1-406-555-0199",
+    "image": "https://www.fsfcleaning.com/images/fsfcleaning-og.jpg",
+    "url": "https://www.fsfcleaning.com",
+    "telephone": "+1-406-534-9152",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Billings",
@@ -97,7 +103,11 @@ n">
         <a href="#services">Services</a>
         <a href="#about">About</a>
         <a href="#contact">Get a Quote</a>
+        <a href="#privacy">Privacy</a>
       </nav>
+      <div class="social" aria-label="social links">
+        <a href="https://www.facebook.com/share/172N8Rni67/?mibextid=wwXlfr" target="_blank" rel="noopener">Facebook</a>
+      </div>
     </div>
   </header>
 
@@ -107,7 +117,7 @@ n">
         <h1>Billings, MT House Cleaning — From the first sweep to the final shine.</h1>
         <p class="lead">Hi, I’m <strong>Rita Castro</strong>. I help busy families and property owners keep spaces spotless with reliable <em>recurring</em>, <em>deep clean</em>, and <em>move‑in/move‑out</em> services.</p>
         <div class="hero-cta">
-          <a class="btn btn-primary" href="tel:+14065550199">Call (406) 555‑0199</a>
+          <a class="btn btn-primary" href="tel:+14065349152">Call (406) 534-9152</a>
           <a class="btn btn-ghost" href="#contact">Get a Free Quote</a>
         </div>
         <div class="badges" role="list" aria-label="Highlights">
@@ -189,6 +199,7 @@ n">
               <li>Supplies & equipment provided</li>
             </ul>
             <p><a href="https://maps.google.com/?q=Billings,+MT" target="_blank" rel="noopener">See service area</a></p>
+            <p><strong>Follow:</strong> <a href="https://www.facebook.com/share/172N8Rni67/?mibextid=wwXlfr" target="_blank" rel="noopener">Facebook</a></p>
           </aside>
         </div>
       </div>
@@ -231,7 +242,7 @@ n">
       <div class="container">
         <h2 id="contact-heading">Get a Free Quote</h2>
         <div class="grid">
-          <form class="card md-8" action="mailto:hello@fsfcleaning.com" method="post" enctype="text/plain">
+          <form class="card md-8" action="mailto:2startcleaning@gmail.com" method="post" enctype="text/plain">
             <label>
               <span>Name</span>
               <input name="Name" required />
@@ -249,15 +260,28 @@ n">
               <textarea name="Message" rows="5" placeholder="Tell me about your home, timing, and goals" required></textarea>
             </label>
             <button class="btn btn-primary" type="submit">Request Quote</button>
-            <p style="color:#64748b;font-size:.95rem">Prefer to call? <a href="tel:+14065550199">(406) 555‑0199</a></p>
-            <p style="color:#64748b;font-size:.9rem">Tip: Replace the form action with your form tool (e.g., Formspree, Tally, Typeform) for better deliverability.</p>
+            <p style="color:#6b6b6b;font-size:.9rem">Tip: Replace the form action with a form tool (Formspree/Tally/Typeform) for better deliverability.</p>
           </form>
           <aside class="card md-4" aria-label="Contact options">
             <h3>Contact</h3>
-            <p><a href="tel:+14065550199">(406) 555‑0199</a><br><a href="mailto:hello@fsfcleaning.com">hello@fsfcleaning.com</a></p>
+            <p><a href="tel:+14065349152">(406) 534‑9152</a><br><a href="mailto:2startcleaning@gmail.com">2startcleaning@gmail.com</a></p>
             <p>Mon–Fri 8am–6pm · Weekends by request</p>
-            <p><a href="#">Facebook</a> · <a href="#">Instagram</a></p>
+            <p><a href="https://www.facebook.com/share/172N8Rni67/?mibextid=wwXlfr" target="_blank" rel="noopener">Facebook</a></p>
           </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="privacy">
+      <div class="container">
+        <h2>Privacy Policy</h2>
+        <div class="card">
+          <p><strong>What we collect:</strong> If you contact us through this site, we collect the details you submit (name, email, phone, and message) to respond to your request.</p>
+          <p><strong>How we use it:</strong> We only use your information to provide quotes, schedule service, and customer support. We do not sell your information.</p>
+          <p><strong>Third‑party tools:</strong> If we use a form provider (e.g., Formspree/Tally), your submission may be processed by that provider according to their policies.</p>
+          <p><strong>Retention:</strong> We keep inquiries as long as needed for service and records, then securely delete them.</p>
+          <p><strong>Your choices:</strong> Email us at <a href="mailto:2startcleaning@gmail.com">2startcleaning@gmail.com</a> to request updates or deletion of your information.</p>
+          <p><strong>Updates:</strong> This policy may change as our services evolve. Last updated <span id="pp-date">today</span>.</p>
         </div>
       </div>
     </section>
@@ -265,13 +289,18 @@ n">
 
   <footer>
     <div class="container" role="contentinfo">
-      <p>© <span id="y"></span> From Start to Finish Cleaning · Billings, MT · Site by Rita Castro</p>
-      <p style="font-size:.9rem">Replace placeholder phone/email/links with your real details. Add a privacy policy link if you collect personal data.</p>
+      <p>© <span id="y"></span> From Start to Finish Cleaning · Billings, MT</p>
+      <div class="inline-links">
+        <a href="#privacy">Privacy Policy</a>
+        <a href="https://www.facebook.com/share/172N8Rni67/?mibextid=wwXlfr" target="_blank" rel="noopener">Facebook</a>
+        <a href="#contact">Contact</a>
+      </div>
     </div>
   </footer>
 
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();
+    document.getElementById('pp-date').textContent = new Date().toLocaleDateString();
   </script>
 </body>
 </html>
