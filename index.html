@@ -15,17 +15,16 @@
 
   <style>
     :root{
-      --brand:#d4af37; /* gold */
-      --brand-600:#b8860b; /* darker gold */
-      --ink:#2c2c2c; /* dark gray text */
-      --muted:#6b6b6b; /* medium gray */
-      --bg:#fffef9; /* cream background */
-      --card:#ffffff; /* white cards */
-      --ring:rgba(212,175,55,.35); /* gold focus ring */
+      --brand:#d4af37;
+      --brand-600:#b8860b;
+      --ink:#2c2c2c;
+      --muted:#6b6b6b;
+      --bg:#fffef9;
+      --card:#ffffff;
+      --ring:rgba(212,175,55,.35);
     }
     *{box-sizing:border-box}
     body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,"Noto Sans",sans-serif;line-height:1.6;color:var(--ink);background:var(--bg);
-      /* subtle gold dot texture */
       background-image: radial-gradient(rgba(212,175,55,.08) .6px, transparent .7px);
       background-size: 18px 18px;
     }
@@ -43,6 +42,7 @@
     .btn-primary{background:var(--brand);color:#fff}
     .btn-primary:hover{background:var(--brand-600)}
     .btn-ghost{border-color:var(--brand-600);color:var(--brand-600);background:#fff}
+    .btn-outline{background:#fff;border-color:#e2e8f0;color:var(--ink)}
     .hero{padding:5rem 0 3rem;background:linear-gradient(180deg,#fff8e1,transparent)}
     .hero h1{font-size:clamp(1.9rem,5vw,3rem);line-height:1.15;margin:0 0 1rem;color:var(--brand-600)}
     .lead{font-size:1.1rem;color:var(--muted);max-width:60ch}
@@ -115,10 +115,11 @@
     <section class="hero">
       <div class="container">
         <h1>Billings, MT House Cleaning — From the first sweep to the final shine.</h1>
-        <p class="lead">Hi, I’m <strong>Rita Castro</strong>. I help busy families and property owners keep spaces spotless with reliable <em>recurring</em>, <em>deep clean</em>, and <em>move‑in/move‑out</em> services.</p>
+        <p class="lead">Hi, I’m <strong>Rita Castro</strong>. I help busy families and property owners keep spaces spotless with reliable <em>recurring</em>, <em>deep clean</em>, and <em>move-in/move-out</em> services.</p>
         <div class="hero-cta">
           <a class="btn btn-primary" href="tel:+14065349152">Call (406) 534-9152</a>
           <a class="btn btn-ghost" href="#contact">Get a Free Quote</a>
+          <a class="btn btn-outline" href="https://www.yelp.com/biz/start-to-finish-cleaning-billings" target="_blank" rel="nofollow noopener">⭐ Leave a Yelp Review</a>
         </div>
         <div class="badges" role="list" aria-label="Highlights">
           <span class="badge" role="listitem">Locally Owned</span>
@@ -127,7 +128,6 @@
         </div>
       </div>
     </section>
-
     <section id="services">
       <div class="container">
         <h2>Services</h2>
@@ -237,36 +237,38 @@
         </div>
       </div>
     </section>
-
-    <section id="contact" aria-labelledby="contact-heading">
+<section id="contact" aria-labelledby="contact-heading">
       <div class="container">
         <h2 id="contact-heading">Get a Free Quote</h2>
         <div class="grid">
-          <form class="card md-8" action="mailto:2startcleaning@gmail.com" method="post" enctype="text/plain">
+          <form class="card md-8" action="https://formspree.io/f/xblkeanp" method="POST">
             <label>
               <span>Name</span>
-              <input name="Name" required />
+              <input name="name" required />
             </label>
             <label>
               <span>Email</span>
-              <input name="Email" type="email" required />
+              <input name="email" type="email" required />
             </label>
             <label>
               <span>Phone</span>
-              <input name="Phone" type="tel" />
+              <input name="phone" type="tel" />
             </label>
             <label>
               <span>How can we help?</span>
-              <textarea name="Message" rows="5" placeholder="Tell me about your home, timing, and goals" required></textarea>
+              <textarea name="message" rows="5" placeholder="Tell me about your home, timing, and goals" required></textarea>
             </label>
+            <input type="hidden" name="_subject" value="New quote request from fsfcleaning.com" />
+            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
             <button class="btn btn-primary" type="submit">Request Quote</button>
-            <p style="color:#6b6b6b;font-size:.9rem">Tip: Replace the form action with a form tool (Formspree/Tally/Typeform) for better deliverability.</p>
+            <p style="color:#6b6b6b;font-size:.9rem">Protected by Formspree. We’ll never share your info.</p>
           </form>
           <aside class="card md-4" aria-label="Contact options">
             <h3>Contact</h3>
             <p><a href="tel:+14065349152">(406) 534‑9152</a><br><a href="mailto:2startcleaning@gmail.com">2startcleaning@gmail.com</a></p>
             <p>Mon–Fri 8am–6pm · Weekends by request</p>
             <p><a href="https://www.facebook.com/share/172N8Rni67/?mibextid=wwXlfr" target="_blank" rel="noopener">Facebook</a></p>
+            <p><a class="btn btn-outline" href="https://www.yelp.com/biz/start-to-finish-cleaning-billings" target="_blank" rel="nofollow noopener">⭐ Leave a Yelp Review</a></p>
           </aside>
         </div>
       </div>
@@ -278,7 +280,7 @@
         <div class="card">
           <p><strong>What we collect:</strong> If you contact us through this site, we collect the details you submit (name, email, phone, and message) to respond to your request.</p>
           <p><strong>How we use it:</strong> We only use your information to provide quotes, schedule service, and customer support. We do not sell your information.</p>
-          <p><strong>Third‑party tools:</strong> If we use a form provider (e.g., Formspree/Tally), your submission may be processed by that provider according to their policies.</p>
+          <p><strong>Third‑party tools:</strong> We use Formspree to process form submissions. Your submission may be processed by Formspree according to their policies.</p>
           <p><strong>Retention:</strong> We keep inquiries as long as needed for service and records, then securely delete them.</p>
           <p><strong>Your choices:</strong> Email us at <a href="mailto:2startcleaning@gmail.com">2startcleaning@gmail.com</a> to request updates or deletion of your information.</p>
           <p><strong>Updates:</strong> This policy may change as our services evolve. Last updated <span id="pp-date">today</span>.</p>
@@ -293,6 +295,7 @@
       <div class="inline-links">
         <a href="#privacy">Privacy Policy</a>
         <a href="https://www.facebook.com/share/172N8Rni67/?mibextid=wwXlfr" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://www.yelp.com/biz/start-to-finish-cleaning-billings" target="_blank" rel="nofollow noopener">Yelp Reviews</a>
         <a href="#contact">Contact</a>
       </div>
     </div>
